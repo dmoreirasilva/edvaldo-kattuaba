@@ -1,0 +1,953 @@
+<!--
+  Página de vendas — Edvaldo Kattuaba (Hipnoterapia Clínica)
+  Gerada em 2026-08-07, no mesmo sistema visual de institutodiegomoreira.com.br
+  (mesmas cores/tipografia — pedido explícito do Diego: "parecida com a minha").
+
+  PENDÊNCIAS conhecidas (ver workspace/businesses/edvaldo_kattuaba/INDEX.md):
+  - Preço/estrutura de sessão: NÃO informado ainda → seções de programa ficaram
+    sem valor, com CTA pra "conversa inicial". Preencher quando o Edvaldo mandar.
+  - Depoimentos: NENHUM real recebido ainda → seção foi OMITIDA de propósito
+    (não inventei depoimento nenhum). Ver comentário perto de <!-- DEPOIMENTOS -->
+    pra saber onde colar quando o Edvaldo mandar prints/vídeos reais.
+  - História de origem pessoal do Edvaldo (por que virou hipnoterapeuta): não
+    temos ainda — a seção "Sobre" usa só fatos confirmados (método, credenciais,
+    consultórios), sem inventar uma narrativa pessoal.
+  - "Garantia 100% de resultado" do Diego NÃO foi replicada aqui de propósito:
+    é uma política de negócio dele, não confirmada pelo Edvaldo. Troquei por uma
+    seção de confiança sem prometer resultado.
+  - Tag de conversão do Google Ads: não adicionada (Edvaldo ainda não roda tráfego
+    pago). Adicionar quando/se for o caso, no mesmo padrão da página do Diego.
+
+  ATUALIZAÇÃO 2026-08-07: seção "CIÊNCIA" adicionada (mesmos PMIDs/estudos já
+  verificados na página do Diego — são achados genéricos de neuroplasticidade,
+  ansiedade e crenças limitantes, aplicáveis à Hipnoterapia Clínica do Edvaldo
+  sem precisar reescrever a pesquisa). Tese 3 (crenças limitantes) foi conectada
+  de propósito com o mapeamento comportamental dele (capacidade/merecimento/
+  identidade/abundância) — ver company/mapeamento-comportamental.yaml.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hipnoterapia Clínica | Edvaldo Kattuaba — Ansiedade, Traumas e Bloqueios Emocionais</title>
+<meta name="description" content="Hipnoterapia Clínica com Edvaldo Kattuaba. Atendimento individual presencial (Laranjal Paulista, Saltinho, Alphaville) e online para ansiedade, traumas emocionais, medos, baixa autoestima e bloqueios que travam sua vida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:   #0A1628;
+    --navy2:  #0E1D3C;
+    --gold:   #C9963D;
+    --gold2:  #E8B84B;
+    --cream:  #F8F6F1;
+    --surface:#EDE8DF;
+    --muted:  #6B7280;
+    --line:   #DDD8CF;
+    --white:  #FFFFFF;
+    --green:  #25D366;
+    --red:    #B5544A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  body{background:var(--cream);color:var(--navy);font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.65}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  .container{max-width:1100px;margin:0 auto;padding:0 24px}
+  .container-sm{max-width:720px;margin:0 auto;padding:0 24px}
+  .text-gold{color:var(--gold)}
+  .text-muted{color:var(--muted)}
+  .serif{font-family:"Playfair Display",serif}
+
+  /* ── INFO BAR (sem urgência falsa — só localização/formato) ── */
+  .info-bar{background:var(--gold);color:var(--navy);padding:10px 24px;text-align:center;font-size:14px;font-weight:600}
+  .info-bar strong{font-weight:700}
+
+  /* ── BOTÕES ── */
+  .btn{display:inline-block;font-family:"Inter",sans-serif;font-weight:700;font-size:16px;padding:18px 40px;border-radius:6px;cursor:pointer;border:0;transition:transform .25s,box-shadow .25s;text-align:center;line-height:1}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.22)}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-navy{background:var(--navy);color:var(--white)}
+  .btn-wpp{background:var(--green);color:var(--white);display:inline-flex;align-items:center;gap:10px}
+  .btn-lg{font-size:18px;padding:22px 52px}
+  .btn-block{width:100%;display:block}
+  .btn-sub{display:block;font-size:13px;font-weight:400;opacity:.8;margin-top:5px}
+
+  /* ── NAV ── */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(10,22,40,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,150,61,.2)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .nav-logo{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",serif;font-size:17px;color:var(--gold);letter-spacing:.02em}
+  .nav-logo img{width:30px;height:30px;border-radius:6px;object-fit:cover}
+  .nav-cta{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--gold);border:1px solid rgba(201,150,61,.5);padding:9px 20px;border-radius:6px;transition:all .25s}
+  .nav-cta:hover{background:var(--gold);color:var(--navy)}
+
+  /* ── HERO ── */
+  .hero{background:var(--navy);color:var(--white);padding:96px 0 80px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,61,.15),transparent 65%);pointer-events:none}
+  .hero::after{content:"";position:absolute;bottom:-60px;left:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,150,61,.08),transparent 65%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero-photo-wrap{flex-shrink:0}
+  .hero-photo-img{border-radius:20px;overflow:hidden;border:3px solid rgba(201,150,61,.35);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+  .hero-photo-img img{width:100%;display:block;object-fit:cover;object-position:center top}
+  @media(max-width:768px){.hero-grid{display:block}.hero-photo-wrap{display:none}}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .hero-title{font-family:"Playfair Display",serif;font-size:clamp(34px,4.2vw,56px);line-height:1.08;letter-spacing:-.02em;margin-bottom:24px}
+  .hero-title em{font-style:italic;color:var(--gold)}
+  .hero-sub{font-size:clamp(17px,1.8vw,19px);color:rgba(255,255,255,.78);max-width:560px;line-height:1.65;margin-bottom:36px}
+  .hero-sub strong{color:var(--white)}
+  .hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:rgba(255,255,255,.72);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:7px 15px;border-radius:999px}
+  .badge::before{content:"✓";color:var(--gold);font-weight:700}
+  .hero-cta-group{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:48px}
+  .hero-disclaimer{font-size:13px;color:rgba(255,255,255,.4);margin-top:4px}
+  .hero-proof{padding-top:32px;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:48px;flex-wrap:wrap}
+  .hero-proof-item{text-align:center}
+  .hero-proof-num{font-family:"Playfair Display",serif;font-size:32px;color:var(--gold);line-height:1}
+  .hero-proof-label{font-size:13px;color:rgba(255,255,255,.5);margin-top:5px;max-width:130px}
+  @keyframes btn-pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
+  .btn-wpp.btn-lg{animation:btn-pulse 2.4s infinite}
+
+  /* ── PROOF STRIP ── */
+  .proof-strip{background:var(--white);border-bottom:1px solid var(--line);padding:28px 0}
+  .proof-strip-inner{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+  .proof-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--muted)}
+  .proof-item::before{content:"✦";color:var(--gold);font-size:10px}
+
+  /* ── SECTIONS ── */
+  .section-eyebrow{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .section-title{font-family:"Playfair Display",serif;font-size:clamp(28px,4vw,44px);line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
+  .section-sub{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:48px}
+
+  /* ── PROBLEMA ── */
+  .problem{background:var(--surface);padding:88px 0}
+  .pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:40px}
+  .pain-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px;border-left:3px solid var(--gold)}
+  .pain-icon{font-size:22px;margin-bottom:12px}
+  .pain-title{font-weight:700;font-size:16px;margin-bottom:8px}
+  .pain-text{color:var(--muted);font-size:15px;line-height:1.6}
+
+  /* ── MANIFESTO ── */
+  .manifesto-strip{background:var(--navy);padding:80px 0;text-align:center}
+  .manifesto-quote{font-family:"Playfair Display",serif;font-size:clamp(21px,3.2vw,32px);color:var(--white);line-height:1.4;max-width:820px;margin:0 auto;position:relative;padding:0 40px}
+  .manifesto-quote::before{content:"\201C";position:absolute;left:0;top:-.1em;color:var(--gold);font-size:1.6em;opacity:.8;font-family:"Playfair Display",serif}
+  .manifesto-author{font-size:14px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-top:24px}
+
+  /* ── MÉTODO ── */
+  .method{padding:88px 0}
+  .method-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:40px}
+  .method-steps{display:flex;flex-direction:column;gap:20px}
+  .step{display:flex;gap:20px;align-items:flex-start}
+  .step-num{min-width:44px;height:44px;background:var(--gold);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0}
+  .step-content h4{font-weight:700;font-size:16px;margin-bottom:4px}
+  .step-content p{color:var(--muted);font-size:15px}
+  .method-visual{background:var(--navy);border-radius:16px;padding:36px;color:var(--white)}
+  .method-visual h3{font-family:"Playfair Display",serif;font-size:22px;color:var(--gold);margin-bottom:24px}
+  .program-box{background:rgba(255,255,255,.05);border:1px solid rgba(201,150,61,.3);border-radius:10px;padding:24px;margin-bottom:16px}
+  .program-box:last-of-type{margin-bottom:0;border-color:var(--gold);background:rgba(201,150,61,.07)}
+  .program-label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .program-name{font-family:"Playfair Display",serif;font-size:22px;color:var(--white);margin-bottom:6px}
+  .program-detail{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5}
+  .program-featured-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+
+  /* ── DEPOIMENTOS (CSS mantido para quando houver conteúdo real) ── */
+  .testimonials{background:var(--surface);padding:88px 0}
+  .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:48px}
+  .testi-card{background:var(--navy);border-radius:14px;padding:36px;color:var(--white);position:relative}
+  .testi-stars{color:var(--gold);font-size:16px;letter-spacing:3px;margin-bottom:16px}
+  .testi-quote{font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);margin-bottom:24px;font-style:italic}
+  .testi-quote::before{content:"\201C";color:var(--gold);font-size:1.4em;line-height:0;margin-right:4px;vertical-align:-.1em}
+  .testi-author{display:flex;align-items:center;gap:12px}
+  .testi-avatar{width:42px;height:42px;border-radius:50%;background:rgba(201,150,61,.2);border:2px solid rgba(201,150,61,.4);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--gold);font-size:15px;flex-shrink:0}
+  .testi-name{font-weight:700;font-size:15px}
+  .testi-role{font-size:13px;color:rgba(255,255,255,.45);margin-top:2px}
+  .testi-result{margin-top:20px;background:rgba(201,150,61,.1);border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;color:var(--gold);font-weight:600}
+  .testi-source{font-size:12px;color:rgba(255,255,255,.35);margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase;font-weight:600}
+
+  /* ── TRANSFORMAÇÃO A→B ── */
+  .transform{padding:88px 0}
+  .ab-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin-top:48px}
+  .ab-card{border-radius:14px;padding:36px}
+  .ab-card.before{background:var(--white);border:1px solid var(--line)}
+  .ab-card.after{background:var(--navy);color:var(--white)}
+  .ab-label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+  .ab-card.before .ab-label{color:var(--muted)}
+  .ab-card.after .ab-label{color:var(--gold)}
+  .ab-list{list-style:none}
+  .ab-list li{padding:10px 0;border-bottom:1px solid;font-size:15px;display:flex;align-items:flex-start;gap:10px}
+  .ab-card.before .ab-list li{border-color:var(--line);color:var(--muted)}
+  .ab-card.after .ab-list li{border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.88)}
+  .ab-list li::before{flex-shrink:0;margin-top:2px}
+  .ab-card.before .ab-list li::before{content:"✗";color:var(--red)}
+  .ab-card.after .ab-list li::before{content:"✓";color:var(--gold)}
+  .ab-arrow{font-size:36px;color:var(--gold);text-align:center}
+
+  /* ── SOBRE ── */
+  .about{background:var(--surface);padding:88px 0}
+  .about-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+  .about-photos{display:flex;flex-direction:column;gap:16px}
+  .about-photo-main{border-radius:16px;overflow:hidden;aspect-ratio:4/5;position:relative}
+  .about-photo-main img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .about-photo-caption{font-size:12px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+  @media(max-width:768px){.about-photo-main{aspect-ratio:3/4}}
+  .about-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,150,61,.4);padding:6px 14px;border-radius:999px;margin-bottom:20px}
+  .about-title{font-family:"Playfair Display",serif;font-size:clamp(26px,3.5vw,38px);line-height:1.15;margin-bottom:20px}
+  .about-text{color:var(--muted);font-size:16px;line-height:1.75;margin-bottom:14px}
+  .about-text.quote{font-family:"Playfair Display",serif;font-style:italic;color:var(--navy);font-size:18px;border-left:3px solid var(--gold);padding-left:18px;margin:20px 0}
+  .about-credentials{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+  .credential{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500}
+  .credential::before{content:"✦";color:var(--gold);font-size:12px;flex-shrink:0}
+
+  /* ── COMO FUNCIONA O PRIMEIRO CONTATO ── */
+  .howto{background:var(--navy);padding:88px 0;color:var(--white);text-align:center}
+  .howto .section-title{color:var(--white)}
+  .howto .section-sub{color:rgba(255,255,255,.6);margin:0 auto 48px}
+  .howto-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:48px;position:relative}
+  .howto-steps::before{content:"";position:absolute;top:32px;left:calc(100%/6);right:calc(100%/6);height:1px;background:rgba(201,150,61,.25);z-index:0}
+  .howto-step{position:relative;z-index:1;padding:0 20px}
+  .howto-num{width:64px;height:64px;border-radius:50%;background:var(--navy2);border:2px solid rgba(201,150,61,.4);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:24px;color:var(--gold);margin:0 auto 20px}
+  .howto-step h4{font-weight:700;font-size:16px;color:var(--white);margin-bottom:8px}
+  .howto-step p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.6}
+  .howto-note{font-size:14px;color:rgba(255,255,255,.4);margin-top:20px}
+
+  /* ── CONFIANÇA (sem prometer resultado) ── */
+  .guarantee{background:var(--cream);padding:80px 0;text-align:center}
+  .guarantee-box{background:var(--navy);border:1px solid rgba(201,150,61,.3);border-radius:16px;padding:56px 48px;max-width:700px;margin:0 auto}
+  .guarantee-icon{font-size:52px;margin-bottom:20px}
+  .guarantee-title{font-family:"Playfair Display",serif;font-size:clamp(24px,3.5vw,34px);color:var(--gold);margin-bottom:16px}
+  .guarantee-text{font-size:17px;color:rgba(255,255,255,.78);line-height:1.75}
+  .guarantee-cta{margin-top:32px}
+
+  /* ── PARA QUEM ── */
+  .forwho{background:var(--surface);padding:88px 0}
+  .forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+  .forwho-card{border-radius:12px;padding:32px}
+  .forwho-card.yes{background:var(--navy);color:var(--white)}
+  .forwho-card.no{background:var(--white);border:1px solid var(--line)}
+  .forwho-card h3{font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px}
+  .forwho-card.yes h3{color:var(--gold)}
+  .forwho-card.no h3{color:var(--muted)}
+  .forwho-list{list-style:none}
+  .forwho-list li{padding:10px 0;border-bottom:1px solid;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+  .forwho-card.yes .forwho-list li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.85)}
+  .forwho-card.no .forwho-list li{border-color:var(--line);color:var(--muted)}
+  .forwho-card.yes .forwho-list li::before{content:"✓";color:var(--gold);font-weight:700;flex-shrink:0}
+  .forwho-card.no .forwho-list li::before{content:"✗";color:var(--red);flex-shrink:0}
+
+  /* ── FAQ ── */
+  .faq{background:var(--cream);padding:88px 0}
+  .faq-list{margin-top:40px;display:flex;flex-direction:column;gap:14px}
+  .faq-item{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .faq-q{font-weight:700;font-size:16px;padding:24px 28px;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq-q::after{content:"+";color:var(--gold);font-size:22px;line-height:1;flex-shrink:0;transition:transform .25s}
+  .faq-item.open .faq-q::after{transform:rotate(45deg)}
+  .faq-a{color:var(--muted);font-size:15px;line-height:1.7;padding:0 28px 24px;display:none}
+  .faq-item.open .faq-a{display:block}
+
+  /* ── CTA FINAL ── */
+  .cta-final{background:var(--navy);padding:100px 0;text-align:center;color:var(--white)}
+  .cta-final h2{font-family:"Playfair Display",serif;font-size:clamp(30px,5vw,50px);line-height:1.1;margin-bottom:16px}
+  .cta-final h2 em{font-style:italic;color:var(--gold)}
+  .cta-final p{font-size:19px;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 40px}
+  .cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  /* ── MICRO CTA BAR ── */
+  .micro-cta{background:rgba(201,150,61,.08);border-top:1px solid rgba(201,150,61,.2);border-bottom:1px solid rgba(201,150,61,.2);padding:28px 24px;text-align:center}
+  .micro-cta p{font-size:16px;color:var(--navy);margin-bottom:16px}
+  .micro-cta strong{font-weight:700}
+
+  /* ── FOOTER ── */
+  footer{background:var(--navy2);padding:40px 0;border-top:1px solid rgba(255,255,255,.06)}
+  .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .footer-brand{font-family:"Playfair Display",serif;font-size:16px;color:var(--gold)}
+  .footer-text{font-size:13px;color:rgba(255,255,255,.3)}
+
+  /* ── CIÊNCIA ── */
+  .science{background:var(--navy2);padding:88px 0;color:var(--white)}
+  .science .section-eyebrow,.science .section-title{text-align:center}
+  .science .section-title{color:var(--white);margin-bottom:16px}
+  .science-intro{text-align:center;font-size:17px;color:rgba(255,255,255,.65);max-width:660px;margin:0 auto 52px;line-height:1.8}
+  .science-intro strong{color:var(--white)}
+  .sci-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:44px}
+  .sci-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--gold);border-radius:12px;padding:30px 26px}
+  .sci-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);background:rgba(201,150,61,.12);border:1px solid rgba(201,150,61,.3);border-radius:4px;padding:4px 10px;margin-bottom:18px}
+  .sci-finding{font-family:"Playfair Display",serif;font-size:1rem;color:var(--white);line-height:1.6;font-style:italic;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.09)}
+  .sci-finding::before{content:"\201C";color:var(--gold);font-size:1.3em}
+  .sci-finding::after{content:"\201D";color:var(--gold);font-size:1.3em}
+  .sci-implication{font-size:14px;color:rgba(255,255,255,.52);line-height:1.75;margin-bottom:14px}
+  .sci-pmid{font-size:11px;color:rgba(255,255,255,.28);border-top:1px solid rgba(255,255,255,.07);padding-top:10px}
+  .sci-pmid a{color:rgba(201,150,61,.55);text-decoration:none;font-weight:600}
+  .sci-pmid a:hover{color:var(--gold)}
+  .sci-bridge{max-width:680px;margin:0 auto 52px;background:rgba(201,150,61,.09);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:24px 28px;font-size:16px;color:rgba(255,255,255,.8);line-height:1.8}
+  .sci-bridge strong{color:var(--gold)}
+  .tese-block{margin-bottom:44px}
+  .tese-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid rgba(255,255,255,.1)}
+  .tese-header h3{font-size:15px;color:var(--white);flex:1;font-family:"Inter",sans-serif;font-weight:600}
+  .ev-badge{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:4px;flex-shrink:0}
+  .ev-forte{background:rgba(21,128,61,.25);color:#4ade80;border:1px solid rgba(74,222,128,.3)}
+  .ev-mista{background:rgba(161,98,7,.25);color:#fbbf24;border:1px solid rgba(251,191,36,.3)}
+  .sci-table{width:100%;border-collapse:collapse;font-size:14px}
+  .sci-table th{text-align:left;padding:10px 14px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.35);border-bottom:1px solid rgba(255,255,255,.1)}
+  .sci-table td{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top;line-height:1.6;color:rgba(255,255,255,.65)}
+  .sci-table tr:last-child td{border-bottom:none}
+  .sci-table td:first-child{color:rgba(255,255,255,.9);font-weight:600;width:28%}
+  .sci-table td:last-child{width:15%}
+  .sci-pmid-link{display:inline-block;background:rgba(201,150,61,.14);border:1px solid rgba(201,150,61,.28);color:var(--gold);font-size:11px;font-weight:700;padding:4px 8px;border-radius:4px;text-decoration:none;white-space:nowrap}
+  .sci-pmid-link:hover{background:var(--gold);color:var(--navy)}
+  .honest-note{background:rgba(201,150,61,.07);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:12px 16px;font-size:13px;color:rgba(255,255,255,.55);margin-top:12px;line-height:1.7}
+  .honest-note strong{color:rgba(255,255,255,.85)}
+  .sci-disclaimer{font-size:12px;color:rgba(255,255,255,.28);text-align:center;margin-top:36px;line-height:1.7}
+  .sci-disclaimer a{color:rgba(201,150,61,.45);text-decoration:none}
+  @media(max-width:768px){.sci-cards{grid-template-columns:1fr}.tese-header{flex-wrap:wrap}}
+
+  /* ── ANIMAÇÃO ── */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ── STICKY WHATSAPP ── */
+  .wpp-sticky{position:fixed;bottom:28px;right:28px;z-index:100;background:var(--green);color:var(--white);height:60px;border-radius:30px;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 22px;font-weight:700;font-size:15px;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s;white-space:nowrap;text-decoration:none}
+  .wpp-sticky:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,.55)}
+  .wpp-sticky svg{flex-shrink:0}
+  @media(max-width:768px){.wpp-sticky{width:60px;height:60px;padding:0;border-radius:50%;font-size:0;gap:0}.wpp-label{display:none}}
+
+  /* ── RESPONSIVO ── */
+  @media(max-width:768px){
+    .method-intro{grid-template-columns:1fr}
+    .about-inner{grid-template-columns:1fr}
+    .ab-grid{grid-template-columns:1fr;gap:16px}
+    .ab-arrow{transform:rotate(90deg)}
+    .forwho-grid{grid-template-columns:1fr}
+    .hero-proof{gap:24px}
+    .cta-buttons{flex-direction:column;align-items:center}
+    .howto-steps{grid-template-columns:1fr}
+    .howto-steps::before{display:none}
+    .proof-strip-inner{gap:24px;justify-content:flex-start}
+    .testimonials-grid{grid-template-columns:1fr}
+    .guarantee-box{padding:36px 24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- INFO BAR -->
+<div class="info-bar">
+  Atendimento presencial (Laranjal Paulista · Saltinho · Alphaville) e online para todo o Brasil
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <span class="nav-logo"><img src="assets/logo-edvaldo-kattuaba.jpg" alt="Edvaldo Kattuaba">Edvaldo Kattuaba</span>
+      <a href="#cta" class="nav-cta">Falar no WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Hipnoterapia Clínica</p>
+        <h1 class="hero-title">
+          Ansiedade, trauma e bloqueio não são o problema.<br>São o sintoma. <em>A raiz pode ser tratada.</em>
+        </h1>
+        <p class="hero-sub">
+          Para quem já tentou de tudo e continua carregando ansiedade, traumas, medos ou bloqueios emocionais que travam a vida pessoal e profissional.
+          <strong>Acesso direto ao subconsciente, onde a causa realmente está.</strong>
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Hipnoterapia clínica individual</span>
+          <span class="badge">Presencial: Laranjal Paulista · Saltinho · Alphaville</span>
+          <span class="badge">Atendimento também online</span>
+          <span class="badge">Certificado OMNI Legacy</span>
+        </div>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20entender%20como%20funciona%20a%20Hipnoterapia%20Cl%C3%ADnica" class="btn btn-wpp btn-lg" target="_blank">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com Edvaldo agora
+            <span class="btn-sub">Conversa inicial, sem compromisso</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-img">
+          <img src="assets/retrato-edvaldo-omni.jpg" alt="Edvaldo Kattuaba, Hipnoterapeuta" width="460" height="560">
+        </div>
+      </div>
+    </div>
+    <div class="hero-proof">
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">1:1</div>
+        <div class="hero-proof-label">atendimento individual e exclusivo</div>
+      </div>
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">3</div>
+        <div class="hero-proof-label">consultórios + atendimento online</div>
+      </div>
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">OMNI</div>
+        <div class="hero-proof-label">Legacy — certificação concluída em 2026</div>
+      </div>
+      <div class="hero-proof-item">
+        <div class="hero-proof-num">Raiz</div>
+        <div class="hero-proof-label">trabalho na causa, não no sintoma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<div class="proof-strip">
+  <div class="proof-strip-inner">
+    <div class="proof-item">Certificado OMNI Legacy</div>
+    <div class="proof-item">Prêmio Destaques do Ano 2025</div>
+    <div class="proof-item">Consultórios em 3 cidades</div>
+    <div class="proof-item">Atendimento presencial e online</div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="problem reveal">
+  <div class="container">
+    <p class="section-eyebrow">O peso que você carrega</p>
+    <h2 class="section-title">Se algum desses padrões<br>te é familiar, você não está sozinho(a).</h2>
+    <p class="section-sub">A raiz emocional de um problema raramente aparece do jeito óbvio. Ela aparece disfarçada em padrões do dia a dia.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">🔄</div>
+        <div class="pain-title">A ansiedade não desliga</div>
+        <div class="pain-text">Mesmo quando o corpo descansa, a mente continua girando. Uma preocupação vira outra, sem alívio real.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">⚡</div>
+        <div class="pain-title">Reage mais do que decide</div>
+        <div class="pain-text">Situações pequenas geram reações desproporcionais — sinal de que um trauma antigo ainda está ativo.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🪞</div>
+        <div class="pain-title">Baixa autoestima disfarçada</div>
+        <div class="pain-text">Por fora parece tudo bem. Por dentro, a sensação de nunca ser suficiente não passa.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔁</div>
+        <div class="pain-title">Procrastina o que mais importa</div>
+        <div class="pain-text">Adia decisões e mudanças mesmo sabendo o que precisa fazer — não é preguiça, é bloqueio.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💔</div>
+        <div class="pain-title">Repete padrões que machucam</div>
+        <div class="pain-text">Dependência emocional: dificuldade de se sentir completo(a) sem a aprovação ou presença do outro.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🎭</div>
+        <div class="pain-title">Já tentou de tudo e nada durou</div>
+        <div class="pain-text">Terapia, livros, cursos. Melhora por um tempo. Depois volta. Porque o padrão na raiz nunca mudou.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA DORES -->
+<div style="background:var(--white);border-top:1px solid rgba(201,150,61,.25);border-bottom:1px solid rgba(201,150,61,.25);padding:44px 24px;text-align:center">
+  <p style="font-size:19px;font-weight:700;color:var(--navy);margin-bottom:6px">Se você se identificou com algum desses padrões,</p>
+  <p style="font-size:16px;color:var(--muted);margin-bottom:28px">a conversa inicial com Edvaldo é sem compromisso.</p>
+  <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Me%20identifiquei%20com%20alguns%20padr%C3%B5es%20e%20quero%20entender%20a%20Hipnoterapia%20Cl%C3%ADnica" class="btn btn-wpp btn-lg" target="_blank">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Quero entender meu caso com Edvaldo
+  </a>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto-strip reveal">
+  <div class="container">
+    <blockquote class="manifesto-quote">
+      Quando a pessoa entende a raiz do que a faz sofrer, ela deixa de apenas administrar sintomas e passa a viver uma verdadeira transformação. Meu propósito é ajudar pessoas a recuperarem sua liberdade emocional e retomarem o controle da própria vida.
+    </blockquote>
+    <p class="manifesto-author">Edvaldo Kattuaba · Hipnoterapeuta</p>
+  </div>
+</section>
+
+<!-- CIÊNCIA -->
+<section class="science reveal">
+  <div class="container">
+    <p class="section-eyebrow">Respaldo científico</p>
+    <h2 class="section-title">Reprogramação mental não é<br>metáfora. É o que a ciência prova.</h2>
+    <p class="science-intro">Estudos publicados nas revistas científicas mais respeitadas do mundo confirmam o que a Hipnoterapia Clínica aplica na prática: <strong>o cérebro adulto muda, padrões podem ser reescritos, e a raiz do comportamento está onde a terapia convencional raramente chega.</strong></p>
+
+    <div class="sci-cards">
+
+      <div class="sci-card">
+        <span class="sci-badge">PNAS · Maguire et al. · 2000</span>
+        <p class="sci-finding">Taxistas de Londres que praticavam navegação complexa desenvolveram volume significativamente maior no hipocampo. O cérebro adulto muda estruturalmente com a prática.</p>
+        <p class="sci-implication">Reprogramação mental é fato neurológico, não autoajuda. A Hipnoterapia Clínica não pede que você "force a vontade". Ela acessa o nível onde os padrões estão gravados — e o cérebro literalmente muda.</p>
+        <div class="sci-pmid">PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/10716738/" target="_blank" rel="noopener">10716738</a> · Proceedings of the National Academy of Sciences</div>
+      </div>
+
+      <div class="sci-card">
+        <span class="sci-badge">J. Psychiatric Research · Hofmann &amp; Smits · 2008</span>
+        <p class="sci-finding">Mudar a forma de pensar sobre uma situação produz respostas comportamentais diferentes. A reestruturação cognitiva tem eficácia comprovada no tratamento de ansiedade.</p>
+        <p class="sci-implication">Ansiedade não é só sentimento. É um padrão de interpretação instalado. Quando o padrão muda, a resposta muda junto. É isso que a Hipnoterapia Clínica trata — não o sintoma, o padrão.</p>
+        <div class="sci-pmid">PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/18363421/" target="_blank" rel="noopener">18363421</a> · Journal of Psychiatric Research</div>
+      </div>
+
+      <div class="sci-card">
+        <span class="sci-badge">Cerebral Cortex · Buhle et al. · 2014</span>
+        <p class="sci-finding">Reinterpretar um evento ativa regiões do córtex pré-frontal — a área responsável por regular emoções. A mudança de padrão cognitivo tem assinatura neurológica mensurável.</p>
+        <p class="sci-implication">Cada sessão que reinterpreta um padrão antigo não é só conversa — é intervenção neurológica. O cérebro do cliente literalmente ativa circuitos novos durante o processo.</p>
+        <div class="sci-pmid">PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/23765157/" target="_blank" rel="noopener">23765157</a> · Cerebral Cortex</div>
+      </div>
+
+    </div>
+
+    <div class="sci-bridge">
+      <strong>Por que a terapia convencional "não dura" para muita gente:</strong> ela trabalha na camada consciente. Você fala sobre o problema, ganha insight — mas o padrão subconsciente continua rodando. A Hipnoterapia Clínica vai onde o padrão realmente está. E a ciência mostra que esse nível muda quando acessado da forma certa.
+    </div>
+
+    <!-- TESE 1 -->
+    <div class="tese-block">
+      <div class="tese-header">
+        <h3>Tese 1 — Ansiedade e trauma têm raiz neurológica e psicológica — não são fraqueza de caráter</h3>
+        <span class="ev-badge ev-forte">Evidência forte</span>
+      </div>
+      <table class="sci-table">
+        <thead><tr><th>Autores / Ano</th><th>Achado</th><th>PubMed</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Wickersham et al., 2021</td>
+            <td>Sintomas de saúde mental reduzem significativamente o funcionamento no dia a dia — é dado clínico, não falta de força de vontade.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/33130250/" target="_blank" rel="noopener">PMID 33130250</a></td>
+          </tr>
+          <tr>
+            <td>Richardson et al., 2012</td>
+            <td>Fatores psicológicos — crenças, autoeficácia, mentalidade — predizem comportamento e desempenho tão fortemente quanto capacidade cognitiva.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/22352812/" target="_blank" rel="noopener">PMID 22352812</a></td>
+          </tr>
+          <tr>
+            <td>Cobo-Rendón et al., 2020</td>
+            <td>Bem-estar subjetivo e autoeficácia predizem resultados de vida de forma independente — quem carrega ansiedade não resolvida opera abaixo do seu potencial real.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/32022279/" target="_blank" rel="noopener">PMID 32022279</a></td>
+          </tr>
+          <tr>
+            <td>Hofmann &amp; Smits, 2008</td>
+            <td>Reestruturação cognitiva tem eficácia comprovada no tratamento de ansiedade — mudar o padrão de interpretação muda a resposta.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/18363421/" target="_blank" rel="noopener">PMID 18363421</a></td>
+          </tr>
+          <tr>
+            <td>Carpenter et al., 2018</td>
+            <td>Intervenções cognitivas têm eficácia comprovada em ansiedade, pânico e fobias — múltiplos estudos revisados por pares.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/29451967/" target="_blank" rel="noopener">PMID 29451967</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TESE 2 -->
+    <div class="tese-block">
+      <div class="tese-header">
+        <h3>Tese 2 — O cérebro adulto pode ser reprogramado — neuroplasticidade é fato, não metáfora</h3>
+        <span class="ev-badge ev-forte">Evidência forte</span>
+      </div>
+      <table class="sci-table">
+        <thead><tr><th>Autores / Ano</th><th>Achado</th><th>PubMed</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Maguire et al., 2000</td>
+            <td>Taxistas de Londres desenvolveram volume maior no hipocampo com a prática. O cérebro adulto muda estruturalmente — neuroplasticidade comprovada por imagem.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/10716738/" target="_blank" rel="noopener">PMID 10716738</a></td>
+          </tr>
+          <tr>
+            <td>Draganski et al., 2004</td>
+            <td>Aprender uma nova habilidade aumenta a massa cinzenta em semanas — a mudança é rápida e mensurável por ressonância magnética.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/14737157/" target="_blank" rel="noopener">PMID 14737157</a></td>
+          </tr>
+          <tr>
+            <td>Buhle et al., 2014</td>
+            <td>Reinterpretar um evento ativa o córtex pré-frontal — regulação emocional tem assinatura neurológica real, não é só força de vontade.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/23765157/" target="_blank" rel="noopener">PMID 23765157</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TESE 3 -->
+    <div class="tese-block">
+      <div class="tese-header">
+        <h3>Tese 3 — Crenças limitantes e autoeficácia têm efeito real e mensurável no comportamento</h3>
+        <span class="ev-badge ev-mista">Evidência mista</span>
+      </div>
+      <table class="sci-table">
+        <thead><tr><th>Autores / Ano</th><th>Achado</th><th>PubMed</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Bandura, 1977</td>
+            <td>Autoeficácia — a crença de ser capaz — prediz se a pessoa vai iniciar e persistir num comportamento. Melhor preditor isolado de comportamento.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/847061/" target="_blank" rel="noopener">PMID 847061</a></td>
+          </tr>
+          <tr>
+            <td>Yeager et al., 2019</td>
+            <td>Intervenção de mentalidade melhorou resultados reais em estudo nacional com 12.000 participantes — especialmente em contextos de alta pressão emocional.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/31391586/" target="_blank" rel="noopener">PMID 31391586</a></td>
+          </tr>
+          <tr>
+            <td>Sisk et al., 2018</td>
+            <td>Meta-análise: o efeito de intervenções de mentalidade é modesto quando aplicado de forma isolada e genérica.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/29505339/" target="_blank" rel="noopener">PMID 29505339</a></td>
+          </tr>
+          <tr>
+            <td>Macnamara &amp; Burgoyne, 2023</td>
+            <td>Sem trabalho concreto associado, mudança de mentalidade tem efeito fraco — crença isolada não transforma comportamento sozinha.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/36326645/" target="_blank" rel="noopener">PMID 36326645</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="honest-note"><strong>Nota honesta:</strong> a evidência mais sólida desta tese vem de Bandura (1977). O impacto de frases motivacionais ou intervenções isoladas de "mindset" é modesto. A Hipnoterapia Clínica não usa afirmações genéricas — trabalha as crenças específicas de cada pessoa (como as de capacidade, merecimento, identidade e abundância) dentro de um processo individualizado.</div>
+    </div>
+
+    <!-- TESE 4 -->
+    <div class="tese-block">
+      <div class="tese-header">
+        <h3>Tese 4 — Padrões instalados no passado podem ser alterados — quem você é hoje não é definitivo</h3>
+        <span class="ev-badge ev-forte">Evidência forte</span>
+      </div>
+      <table class="sci-table">
+        <thead><tr><th>Autores / Ano</th><th>Achado</th><th>PubMed</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Roberts et al., 2006</td>
+            <td>Revisão de 92 estudos longitudinais: traços de personalidade e padrões comportamentais mudam de forma sistemática ao longo da vida adulta.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/16435954/" target="_blank" rel="noopener">PMID 16435954</a></td>
+          </tr>
+          <tr>
+            <td>Bleidorn et al., 2018</td>
+            <td>Eventos de vida significativos e intervenções terapêuticas alteram traços de personalidade de forma mensurável e duradoura.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/27716921/" target="_blank" rel="noopener">PMID 27716921</a></td>
+          </tr>
+          <tr>
+            <td>Specht et al., 2011</td>
+            <td>Transições de vida e intervenções estruturadas alteram os cinco grandes traços de personalidade — o efeito persiste anos após a mudança.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/21859226/" target="_blank" rel="noopener">PMID 21859226</a></td>
+          </tr>
+          <tr>
+            <td>Denissen et al., 2019</td>
+            <td>A relação é bidirecional: experiências moldam padrões, e novos padrões criam novas experiências. O processo de mudança se retroalimenta.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/30047764/" target="_blank" rel="noopener">PMID 30047764</a></td>
+          </tr>
+          <tr>
+            <td>Roberts et al., 2007</td>
+            <td>Traços de personalidade predizem resultados de vida — saúde, relacionamentos, desempenho — tão bem quanto inteligência. Mudar o padrão muda o destino.</td>
+            <td><a class="sci-pmid-link" href="https://pubmed.ncbi.nlm.nih.gov/26151971/" target="_blank" rel="noopener">PMID 26151971</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="sci-disclaimer">Todos os estudos verificáveis em <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov</a> — busque pelo PMID. A Hipnoterapia Clínica não substitui acompanhamento médico ou psiquiátrico quando indicado.</p>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="method reveal">
+  <div class="container">
+    <div class="method-intro">
+      <div>
+        <p class="section-eyebrow">Como funciona</p>
+        <h2 class="section-title">Hipnoterapia Clínica</h2>
+        <p class="section-sub">Nada de espetáculo de palco. É uma abordagem terapêutica séria que acessa o subconsciente — onde os padrões realmente estão gravados.</p>
+        <div class="method-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Escuta e identificação da causa</h4>
+              <p>Entendemos juntos onde a ansiedade, o trauma ou o bloqueio realmente começou — não só como ele aparece hoje.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Acesso ao subconsciente</h4>
+              <p>Técnica clínica de hipnoterapia, com você consciente e no controle durante todo o processo.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Ressignificação da causa emocional</h4>
+              <p>A raiz é trabalhada diretamente — não é administração de sintoma, é mudança na origem.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Liberdade emocional restaurada</h4>
+              <p>Você recupera o controle da própria vida, com equilíbrio emocional e clareza mental.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="method-visual">
+        <h3>Como funciona o acompanhamento</h3>
+        <div class="program-box">
+          <div class="program-label">Primeiro passo</div>
+          <div class="program-name">Avaliação Individual</div>
+          <div class="program-detail">Conversa inicial para entender sua queixa e mapear se a Hipnoterapia Clínica é o caminho certo pro seu momento.</div>
+        </div>
+        <div class="program-box">
+          <div class="program-featured-badge">★ Processo Completo</div>
+          <div class="program-label">Acompanhamento</div>
+          <div class="program-name">Individual e Contínuo</div>
+          <div class="program-detail">Sessões no ritmo que seu caso pede, presencial ou online, até a causa ser efetivamente ressignificada.</div>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:20px;line-height:1.6">Formato, ritmo e valores são definidos com você na conversa inicial — cada caso é único.</p>
+        <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20inicial" class="btn btn-gold btn-block" style="margin-top:24px;text-align:center;display:block" target="_blank">Agendar minha avaliação inicial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS
+  OMITIDO DE PROPÓSITO: nenhum depoimento real do Edvaldo foi recebido até agora.
+  Quando Diego mandar prints de WhatsApp, avaliação do Google ou vídeo, usar este
+  markup (mesmo da página do Diego) dentro de <section class="testimonials reveal">:
+
+  <div class="testi-card">
+    <div class="testi-source">💬 WhatsApp</div>
+    <p class="testi-quote">{depoimento real, copiado literalmente}</p>
+    <div class="testi-author">
+      <div class="testi-avatar">{Inicial}</div>
+      <div><div class="testi-name">{Nome}</div><div class="testi-role">Cliente</div></div>
+    </div>
+    <div class="testi-result">✓ {resultado percebido, se houver}</div>
+  </div>
+-->
+
+<!-- TRANSFORMAÇÃO A→B -->
+<section class="transform reveal">
+  <div class="container">
+    <p class="section-eyebrow">A transformação</p>
+    <h2 class="section-title">Do estado A ao estado B</h2>
+    <p class="section-sub">Quando a causa emocional é tratada — não só o sintoma — isso é o que muda.</p>
+    <div class="ab-grid">
+      <div class="ab-card before">
+        <div class="ab-label">Hoje, com o padrão ativo</div>
+        <ul class="ab-list">
+          <li>Ansiedade decidindo por você, no piloto automático</li>
+          <li>Trauma antigo reaparecendo em situações do dia a dia</li>
+          <li>Autoestima que depende da aprovação dos outros</li>
+          <li>Procrastinação te afastando do que você mais quer</li>
+          <li>Padrões de relação que se repetem e machucam</li>
+          <li>Sensação de já ter tentado de tudo, sem mudança real</li>
+        </ul>
+      </div>
+      <div class="ab-arrow">→</div>
+      <div class="ab-card after">
+        <div class="ab-label">Depois da causa ressignificada</div>
+        <ul class="ab-list">
+          <li>Você no controle das suas reações, não a ansiedade</li>
+          <li>O trauma perde o peso — vira história, não gatilho</li>
+          <li>Autoestima que vem de dentro, não da validação alheia</li>
+          <li>Ação no tempo certo, sem o adiamento constante</li>
+          <li>Relações mais saudáveis, com você inteiro nelas</li>
+          <li>Causa emocional ressignificada — mudança que permanece</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20essa%20transforma%C3%A7%C3%A3o%20e%20entender%20como%20come%C3%A7ar" class="btn btn-gold btn-lg" target="_blank">Quero essa transformação →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE EDVALDO -->
+<section class="about reveal">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photos">
+        <div class="about-photo-main">
+          <img src="assets/retrato-edvaldo-omni.jpg" alt="Edvaldo Kattuaba, Hipnoterapeuta" loading="lazy">
+        </div>
+        <p class="about-photo-caption">Edvaldo Kattuaba · Hipnoterapeuta</p>
+      </div>
+      <div>
+        <span class="about-tag">Quem é Edvaldo Kattuaba</span>
+        <h2 class="about-title">Um trabalho focado na causa emocional — não na administração do sintoma.</h2>
+        <p class="about-text">
+          Edvaldo Kattuaba é hipnoterapeuta especializado em desenvolvimento humano e transformação emocional. Seu trabalho identifica a causa emocional real por trás de traumas, ansiedade, medos, dependência emocional, baixa autoestima e procrastinação.
+        </p>
+        <p class="about-text quote">
+          "Quando a pessoa entende a raiz do que a faz sofrer, ela deixa de apenas administrar sintomas e passa a viver uma verdadeira transformação."
+        </p>
+        <p class="about-text">
+          Atende em consultórios próprios em Laranjal Paulista, Saltinho e Alphaville, além de atendimento online para todo o Brasil.
+        </p>
+        <div class="about-credentials">
+          <div class="credential">Certificado OMNI Legacy — OMNI Hypnosis Training Center</div>
+          <div class="credential">Reconhecido com o Prêmio Destaques do Ano 2025</div>
+          <div class="credential">Hipnoterapia Clínica — foco na causa emocional, não no sintoma</div>
+          <div class="credential">Atendimento presencial (3 consultórios) e online</div>
+        </div>
+        <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20conversar%20sobre%20o%20meu%20caso" class="btn btn-wpp" style="margin-top:32px;display:inline-flex;align-items:center;gap:10px" target="_blank">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.523 5.84L0 24l6.336-1.503A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.895 0-3.668-.516-5.187-1.414l-.372-.22-3.764.893.952-3.667-.242-.387A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Conversar sobre o meu caso
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA O PRIMEIRO CONTATO -->
+<section class="howto reveal">
+  <div class="container">
+    <p class="section-eyebrow">Próximos passos</p>
+    <h2 class="section-title">Como funciona o primeiro contato</h2>
+    <p class="section-sub">Sem compromisso — você entende o processo antes de decidir.</p>
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="howto-num">1</div>
+        <h4>Você envia mensagem</h4>
+        <p>Clica no botão e conta, em poucas palavras, o que está sentindo.</p>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">2</div>
+        <h4>Edvaldo entende seu caso</h4>
+        <p>Algumas perguntas para entender sua queixa e se a Hipnoterapia Clínica é o caminho certo agora.</p>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">3</div>
+        <h4>Marca sua primeira sessão</h4>
+        <p>Presencial em um dos consultórios (Laranjal Paulista, Saltinho ou Alphaville) ou online, no seu ritmo.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20come%C3%A7ar%20a%20entender%20meu%20caso" class="btn btn-gold btn-lg" target="_blank" style="margin:0 auto;display:block;width:fit-content">
+      Começar agora →
+    </a>
+    <p class="howto-note">Atendimento individual · Conversa inicial sem compromisso</p>
+  </div>
+</section>
+
+<!-- CONFIANÇA (sem prometer resultado — política de garantia não confirmada) -->
+<section class="guarantee reveal">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🤝</div>
+      <h2 class="guarantee-title">Você não precisa decidir tudo agora</h2>
+      <p class="guarantee-text">
+        A conversa inicial existe justamente pra isso: entender junto com o Edvaldo se a Hipnoterapia Clínica faz sentido pro seu momento — sem pressão, sem compromisso e sem enrolação.
+      </p>
+      <div class="guarantee-cta">
+        <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20entender%20se%20faz%20sentido%20pra%20mim" class="btn btn-gold" target="_blank">Quero entender se é pra mim →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="forwho reveal">
+  <div class="container">
+    <p class="section-eyebrow">Critérios de entrada</p>
+    <h2 class="section-title">Para quem é e para quem não é</h2>
+    <p class="section-sub">Ser honesto sobre isso é o que garante o resultado de quem entra.</p>
+    <div class="forwho-grid">
+      <div class="forwho-card yes">
+        <h3>✓ É pra você se...</h3>
+        <ul class="forwho-list">
+          <li>Você sente ansiedade, trauma ou bloqueio emocional te limitando</li>
+          <li>Já tentou outros caminhos e sente que o problema volta</li>
+          <li>Está disposto(a) a se abrir em sessão e olhar pra causa, não só pro sintoma</li>
+          <li>Quer mudança real, mesmo que exija processo</li>
+          <li>Topa fazer isso com um profissional certificado (OMNI Legacy)</li>
+        </ul>
+      </div>
+      <div class="forwho-card no">
+        <h3>✗ Não é pra você se...</h3>
+        <ul class="forwho-list">
+          <li>Está buscando espetáculo de hipnose de palco</li>
+          <li>Quer solução instantânea sem nenhum processo</li>
+          <li>Não está disposto(a) a falar abertamente sobre o que sente</li>
+          <li>Está em crise aguda que exige avaliação médica/psiquiátrica de urgência</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq reveal">
+  <div class="container-sm">
+    <p class="section-eyebrow">Perguntas frequentes</p>
+    <h2 class="section-title">Suas dúvidas respondidas.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Hipnoterapia é aquele show de hipnose de palco?</p>
+        <p class="faq-a">Não. Hipnoterapia Clínica é uma abordagem terapêutica séria, usada para acessar o subconsciente e trabalhar a causa emocional de traumas, ansiedade e bloqueios. Você fica consciente e no controle durante todo o processo — nada a ver com espetáculo.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">O atendimento é presencial ou online?</p>
+        <p class="faq-a">Os dois. Edvaldo atende em consultórios próprios em Laranjal Paulista, Saltinho e Alphaville, e também online, por videochamada, para qualquer lugar do Brasil.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Quantas sessões eu preciso?</p>
+        <p class="faq-a">Varia de pessoa pra pessoa e depende da causa que estamos trabalhando. Isso é definido com você, com transparência, logo na conversa inicial — sem prometer um número fechado antes de entender seu caso.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Hipnoterapia substitui terapia ou tratamento médico/psiquiátrico?</p>
+        <p class="faq-a">Não. É um trabalho complementar. Se você está em tratamento médico ou psiquiátrico, ou em quadro de crise aguda, isso deve ser avaliado com o profissional responsável — a Hipnoterapia Clínica entra como parte do cuidado, não como substituto.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Como sei se é pra mim?</p>
+        <p class="faq-a">O melhor jeito é a conversa inicial com o próprio Edvaldo pelo WhatsApp — sem compromisso, ele te ouve e diz com honestidade se a Hipnoterapia Clínica faz sentido pro seu momento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final reveal" id="cta">
+  <div class="container">
+    <h2>Pronto para tratar a causa, <em>não só o sintoma?</em></h2>
+    <p>Uma conversa inicial, sem compromisso. Você entende o processo e decide se faz sentido pra você.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Quero%20come%C3%A7ar%20minha%20conversa%20inicial" class="btn btn-wpp btn-lg" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com Edvaldo no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-brand">Edvaldo Kattuaba</span>
+      <span class="footer-text">Hipnoterapia Clínica · Instagram @kattuaba</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÃO WHATSAPP FIXO -->
+<a href="https://wa.me/5515996653979?text=Ol%C3%A1%20Edvaldo!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20conversar" class="wpp-sticky" target="_blank" title="Falar com Edvaldo no WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wpp-label">Falar com Edvaldo</span>
+</a>
+
+<script>
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.06});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
