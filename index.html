@@ -98,6 +98,22 @@
   .hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
   .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:rgba(255,255,255,.72);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:7px 15px;border-radius:999px}
   .badge::before{content:"✓";color:var(--gold);font-weight:700}
+  .badge-light{color:var(--navy);background:var(--white);border:1px solid var(--line)}
+
+  /* ── VÍDEO ATENDIMENTO INTERNACIONAL ── */
+  .video-intl{padding:88px 0;background:var(--surface)}
+  .video-intl-grid{display:grid;grid-template-columns:1.05fr 0.8fr;gap:56px;align-items:center}
+  @media(max-width:768px){.video-intl-grid{display:block}.video-intl-grid>div:last-child{margin-top:40px}}
+  .video-intl-badges{margin:26px 0 34px}
+  .video-card{position:relative;border-radius:22px;overflow:hidden;border:3px solid rgba(201,150,61,.4);box-shadow:0 24px 64px rgba(10,22,40,.22);background:var(--navy);max-width:340px;margin:0 auto}
+  .video-card video{width:100%;display:block;aspect-ratio:9/16;object-fit:cover;background:var(--navy)}
+  .video-flag-badge{position:absolute;top:16px;left:16px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:800;letter-spacing:.02em;padding:8px 14px;border-radius:999px;display:flex;align-items:center;gap:6px;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:2;pointer-events:none}
+  .video-play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:linear-gradient(180deg,rgba(10,22,40,0) 45%,rgba(10,22,40,.6) 100%);transition:opacity .3s ease;z-index:1}
+  .video-play-overlay.hidden{opacity:0;pointer-events:none}
+  .video-play-btn{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:2px solid rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;transition:transform .25s,background .25s,border-color .25s}
+  .video-play-btn svg{margin-left:4px}
+  .video-play-overlay:hover .video-play-btn{transform:scale(1.08);background:var(--gold);border-color:var(--gold)}
+  .video-caption{text-align:center;font-size:13px;color:var(--muted);margin-top:16px;font-style:italic}
   .hero-cta-group{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:48px}
   .hero-disclaimer{font-size:13px;color:rgba(255,255,255,.4);margin-top:4px}
   .hero-proof{padding-top:32px;border-top:1px solid rgba(255,255,255,.1);display:flex;gap:48px;flex-wrap:wrap}
@@ -468,6 +484,44 @@
   </div>
 </section>
 
+<!-- ATENDIMENTO INTERNACIONAL -->
+<section class="video-intl reveal">
+  <div class="container">
+    <div class="video-intl-grid">
+      <div>
+        <p class="section-eyebrow">Atendimento online, sem fronteiras</p>
+        <h2 class="section-title">Onde você estiver,<br>a sessão <em style="color:var(--gold);font-style:italic">te alcança</em>.</h2>
+        <p class="section-sub" style="margin-bottom:0">
+          A distância não é mais uma barreira. O atendimento online já levou a Hipnoterapia Clínica a pacientes brasileiros vivendo fora do país — a sessão acontece com o mesmo cuidado, o mesmo sigilo e o mesmo compromisso de sempre, esteja você em Alphaville ou do outro lado do Atlântico.
+        </p>
+        <div class="hero-badges video-intl-badges">
+          <span class="badge badge-light">Atendimento 100% online</span>
+          <span class="badge badge-light">Brasileiros no exterior</span>
+          <span class="badge badge-light">Sessão individual, em português</span>
+        </div>
+        <a href="https://wa.me/5519998797253?text=Ol%C3%A1%20Edvaldo!%20Estou%20fora%20do%20Brasil%20e%20quero%20entender%20como%20funciona%20o%20atendimento%20online" class="btn btn-wpp btn-lg" target="_blank">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Quero uma sessão online, de onde eu estiver
+        </a>
+      </div>
+      <div>
+        <div class="video-card">
+          <span class="video-flag-badge">🌍 Atendimento internacional</span>
+          <video id="intlVideo" poster="assets/poster-atendimento-internacional.jpg" controls playsinline preload="metadata">
+            <source src="assets/video-atendimento-internacional.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay" id="intlPlayOverlay">
+            <div class="video-play-btn">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="video-caption">Edvaldo comemorando mais uma sessão internacional realizada</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CIÊNCIA -->
 <section class="science reveal">
   <div class="container">
@@ -778,7 +832,7 @@
           "Quando a pessoa entende a raiz do que a faz sofrer, ela deixa de apenas administrar sintomas e passa a viver uma verdadeira transformação."
         </p>
         <p class="about-text">
-          Atende em consultórios próprios em Laranjal Paulista, Saltinho e Alphaville, além de atendimento online para todo o Brasil.
+          Atende em consultórios próprios em Laranjal Paulista, Saltinho e Alphaville, além de atendimento online para todo o Brasil e para brasileiros no exterior.
         </p>
         <div class="about-credentials">
           <div class="credential">Certificado OMNI Legacy — OMNI Hypnosis Training Center</div>
@@ -945,6 +999,14 @@
       if(!isOpen) item.classList.add('open');
     });
   });
+
+  var intlVideo = document.getElementById('intlVideo');
+  var intlOverlay = document.getElementById('intlPlayOverlay');
+  if (intlVideo && intlOverlay) {
+    intlOverlay.addEventListener('click', function(){ intlVideo.play(); });
+    intlVideo.addEventListener('play', function(){ intlOverlay.classList.add('hidden'); });
+    intlVideo.addEventListener('pause', function(){ intlOverlay.classList.remove('hidden'); });
+  }
 </script>
 
 </body>
